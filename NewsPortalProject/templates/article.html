@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block title %}
+    Article
+{% endblock title %}
+{% block content %}
+<h1>{{ article.heading|censor }}</h1>
+<div class="text-start">
+    <p>{{article.date|date:"d M Y"}}</p>
+    <p>{{article.text|censor}}</p>
+    <p>Автор: {{article.author.user.username}}</p>
+    <hr>
+    <a href="{{ article.id }}/update">Изменить</a>
+    <a href="{{ article.id }}/delete">Удалить</a>
+</div>
+{% endblock content %}
