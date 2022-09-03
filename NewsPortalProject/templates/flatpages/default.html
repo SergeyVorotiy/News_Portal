@@ -49,6 +49,9 @@
                         <a class="nav-link" href="/accounts/login">Войти</a>
                         {%endif%}
                     </div>
+                    {% if is_not_author %}
+                        <a class="button" href="/accounts/authorises"> Стать автором</a>
+                    {% endif %}
                 </div>
             </div>
         </nav>

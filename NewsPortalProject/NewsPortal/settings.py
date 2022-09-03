@@ -125,6 +125,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+ACCOUNT_FORMS = {'signup': 'sign.models.SignupForm'}
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
