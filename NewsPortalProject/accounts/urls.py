@@ -5,4 +5,5 @@ urlpatterns = [
 
    path('accounts/<int:pk>/', UserAccountUpdate.as_view(), name='Account'),
 
+
 ]
