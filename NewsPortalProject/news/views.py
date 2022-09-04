@@ -2,15 +2,18 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.views.generic import (
-    ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+    ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from .forms import PostForm
 from .models import Post, Comment, Author, Subscribers
 from .filters import PostFilter
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
 
-
+@login_required
 def SubscribeMe(request, pk):
     user = request.user
     post = Post.objects.get(id=pk)
@@ -96,6 +99,8 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Post
     template_name = 'edit.html'
 
+
+
     def form_valid(self, form):
         postQ = form.save(commit=False)
         current_user = Author.objects.get(user=self.request.user)
@@ -107,6 +112,28 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
         else:
             postQ.position = 'A'
         form.save()
+        recipients = []
+        for category in postQ.categories.all():
+            for sub in Subscribers.objects.filter(category=category):
+                recipients.append(sub.user)
+        for i in recipients:
+            html_content = render_to_string(
+                'subMail_created.html',
+                {
+                    'subMail': postQ,
+                    'recipient': i,
+            }
+            )
+
+            msg = EmailMultiAlternatives(
+                subject=f'{postQ.heading} {postQ.date.strftime("%Y-%M-%d")}',
+                body=f'{postQ.text}',
+                from_email='Vorotiy.Sergey@yandex.ru',
+                to=[i.email],
+            )
+
+            msg.attach_alternative(html_content, "text/html")
+            msg.send()
         return HttpResponseRedirect('../')
 
 
