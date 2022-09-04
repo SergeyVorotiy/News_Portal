@@ -62,7 +62,7 @@ class Post(models.Model):
         return f"{self.text[:124]}..."
 
     def __str__(self):
-        return f'{self.heading}/n{self.preview()}/n{self.author}'
+        return f'{self.heading}/n{self.preview()}/n{self.author}/n{self.categories.all()}'
 
     def get_absolute_url(self):
         return reverse('post', args=[str(self.id)])
@@ -70,9 +70,12 @@ class Post(models.Model):
 
 
 class PostCategory(models.Model):
-    post = models.ForeignKey('Category', on_delete=models.CASCADE)
-    category = models.ForeignKey('Post', on_delete=models.CASCADE)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)
 
+class Subscribers(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
 class Comment(models.Model):
     post = models.ForeignKey('Post', on_delete=models.CASCADE)

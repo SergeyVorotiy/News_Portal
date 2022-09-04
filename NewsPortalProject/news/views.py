@@ -1,14 +1,36 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import (
-    ListView, DetailView, CreateView, UpdateView, DeleteView
+    ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 )
 from .forms import PostForm
-from .models import Post, Comment, Author
+from .models import Post, Comment, Author, Subscribers
 from .filters import PostFilter
-from django.contrib.auth.models import Group
+
+
+def SubscribeMe(request, pk):
+    user = request.user
+    post = Post.objects.get(id=pk)
+    categories = post.categories.all()
+
+    for category in categories:
+        its_ok = False
+        subscribe = Subscribers(user=user, category=category)
+        for s in Subscribers.objects.all():
+            if subscribe.user == s.user and subscribe.category == s.category:
+                its_ok = False
+                break
+            else:
+                its_ok = True
+        if its_ok:
+            subscribe.save()
+    url = '/news/'+str(pk)
+
+    return HttpResponseRedirect(url)
+
 
 class NewsList(ListView):
     model = Post
@@ -101,42 +123,3 @@ class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('post_list')
 
-
-
-    # def form_valid(self, form):
-    #     post = form.save(commit=False)
-    #     current_user = Author.objects.get(user=self.current_request.user)
-    #     if not current_user:
-    #         author = current_user.objects.create(user=self.current_request.user)
-    #     post.author = current_user
-    #     if 'news' in str(self.current_request):
-    #         post.position = 'N'
-    #     else:
-    #         post.position = 'A'
-    #     form.save()
-    #     return HttpResponseRedirect('../')
-
-@login_required
-def create_post(request):
-    form = PostForm()
-
-    if request.method == 'POST':
-        form = PostForm(request.POST)
-        post = form.save(commit=False)
-        current_user = Author.objects.get(user=request.user)
-        author_group = Group.objects.get(name='author')
-        if not current_user:
-            author = current_user.objects.create(user=request.user)
-
-        if not request.user.groups.filter(name='author').exists():
-            author_group.user_set.add(current_user)
-
-        post.author = current_user
-        if 'news' in str(request):
-            post.position = 'N'
-        else:
-            post.position = 'A'
-        form.save()
-        return HttpResponseRedirect('../')
-
-    return render(request, 'edit.html', {'form':form})

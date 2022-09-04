@@ -9,8 +9,18 @@
     <p>{{article.date|date:"d M Y"}}</p>
     <p>{{article.text|censor}}</p>
     <p>Автор: {{article.author.user.username}}</p>
+    <p class="flex justify-content-start">Категории:
+        {% for category in article.categories.all %}
+        {{category}};
+        {% endfor %}
+    </p>
     <hr>
+    {% if article.author.user == request.user %}
     <a href="{{ article.id }}/update">Изменить</a>
-    <a href="{{ article.id }}/delete">Удалить</a>
+
+    {% endif %}
+    {% if request.user %}
+    <a class="m-3" href="{{ article.id }}/subscribe">Подписаться на категории</a>
+    {% endif %}
 </div>
 {% endblock content %}
