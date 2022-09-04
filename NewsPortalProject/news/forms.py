@@ -9,6 +9,7 @@ class PostForm(forms.ModelForm):
         fields = [
             'heading',
             'text',
+            'categories',
         ]
 
 
