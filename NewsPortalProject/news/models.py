@@ -73,6 +73,10 @@ class PostCategory(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f'{self.category.name}, {self.post.author.user.username}'
+
+
 class Subscribers(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
@@ -91,3 +95,4 @@ class Comment(models.Model):
     def dislike(self):
         self.rating -= 1
         self.save()
+

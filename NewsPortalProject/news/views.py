@@ -1,3 +1,4 @@
+import datetime
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
@@ -8,10 +9,12 @@ from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from .forms import PostForm
-from .models import Post, Comment, Author, Subscribers
+from .models import Post, Comment, Author, Subscribers, PostCategory
 from .filters import PostFilter
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
+
+
 
 @login_required
 def SubscribeMe(request, pk):
@@ -99,8 +102,6 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Post
     template_name = 'edit.html'
 
-
-
     def form_valid(self, form):
         postQ = form.save(commit=False)
         current_user = Author.objects.get(user=self.request.user)
@@ -111,6 +112,7 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             postQ.position = 'N'
         else:
             postQ.position = 'A'
+
         form.save()
         recipients = []
         for category in postQ.categories.all():
@@ -126,7 +128,7 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             )
 
             msg = EmailMultiAlternatives(
-                subject=f'{postQ.heading} {postQ.date.strftime("%Y-%M-%d")}',
+                subject=f'{postQ.heading} {postQ.date.strftime("%Y-%m-%d")}',
                 body=f'{postQ.text}',
                 from_email='Vorotiy.Sergey@yandex.ru',
                 to=[i.email],
