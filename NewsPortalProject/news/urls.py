@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-   NewsList, NewsView, SearchNews, PostUpdateView, PostDelete, PostCreateView, SubscribeMe
+   NewsList, NewsView, SearchNews, PostUpdateView, PostDelete, PostCreateView, SubscribeMe, LimiterMessage
 )
 
 
@@ -12,5 +12,6 @@ urlpatterns = [
    path('<int:pk>/update/', PostUpdateView.as_view(), name='change_post'),
    path('create/', PostCreateView.as_view()),
    path('<int:pk>/delete', PostDelete.as_view()),
-   path('<int:pk>/subscribe/', SubscribeMe, name='subscribe')
+   path('<int:pk>/subscribe/', SubscribeMe, name='subscribe'),
+   path('/limiterMessage/', LimiterMessage.as_view(), name='limiterMessage'),
 ]

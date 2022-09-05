@@ -96,3 +96,9 @@ class Comment(models.Model):
         self.rating -= 1
         self.save()
 
+class PostLogDB(models.Model):
+    author = models.ForeignKey('Author', on_delete=models.CASCADE)
+    date = models.CharField(max_length=16)
+
+    def __str__(self):
+        return f'{self.author.user.username} {self.date}'

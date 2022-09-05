@@ -1,4 +1,5 @@
 import datetime
+
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
@@ -6,10 +7,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.views.generic import (
-    ListView, DetailView, CreateView, UpdateView, DeleteView
+    ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 )
 from .forms import PostForm
-from .models import Post, Comment, Author, Subscribers, PostCategory
+from .models import Post, Comment, Author, Subscribers, PostLogDB
 from .filters import PostFilter
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
@@ -102,6 +103,7 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Post
     template_name = 'edit.html'
 
+
     def form_valid(self, form):
         postQ = form.save(commit=False)
         current_user = Author.objects.get(user=self.request.user)
@@ -112,32 +114,19 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             postQ.position = 'N'
         else:
             postQ.position = 'A'
+        day = datetime.datetime.today().strftime('%d:%m:%Y')
+        today_author_log = PostLogDB.objects.filter(date=day, author=current_user)
+        print(today_author_log)
+        if today_author_log.count() <= 3:
+            postQ.save()
+            form.save()
+            return HttpResponseRedirect('../')
+        else:
+            return HttpResponseRedirect(reverse_lazy('limiterMessage'))
 
-        form.save()
-        recipients = []
-        for category in postQ.categories.all():
-            for sub in Subscribers.objects.filter(category=category):
-                recipients.append(sub.user)
-        for i in recipients:
-            html_content = render_to_string(
-                'subMail_created.html',
-                {
-                    'subMail': postQ,
-                    'recipient': i,
-            }
-            )
 
-            msg = EmailMultiAlternatives(
-                subject=f'{postQ.heading} {postQ.date.strftime("%Y-%m-%d")}',
-                body=f'{postQ.text}',
-                from_email='Vorotiy.Sergey@yandex.ru',
-                to=[i.email],
-            )
-
-            msg.attach_alternative(html_content, "text/html")
-            msg.send()
-        return HttpResponseRedirect('../')
-
+class LimiterMessage(TemplateView):
+    template_name = 'limiterMessage.html'
 
 class PostUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     permission_required = ('news.change_post', )
