@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'django_apscheduler',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -151,8 +152,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_FROM_EMAIL = 'Vorotiy.Sergey@yandex.ru'
 
-EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'Vorotiy.Sergey'
-EMAIL_HOST_PASSWORD = 'SerGJinLin186'
+EMAIL_HOST_USER = 'svobeckend@inbox.ru'
+EMAIL_HOST_PASSWORD = 'fiA4iw82X7ttjjj5g9tm'
 EMAIL_USE_SSL = True
+
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+APSCHEDULER_RUN_NOW_TIMEOUT = 25

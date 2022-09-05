@@ -22,13 +22,14 @@ def category_notify_receiver(sender, instance, **kwargs):
                 {
                     'subMail': post,
                     'recipient': i,
+                    'link_id': post.id,
                 }
             )
 
             msg = EmailMultiAlternatives(
                 subject=f'{post.heading} {post.date.strftime("%Y-%m-%d")}',
                 body=f'{post.text}',
-                from_email='Vorotiy.Sergey@yandex.ru',
+                from_email='svobeckend@inbox.ru',
                 to=[i.email],
             )
 
