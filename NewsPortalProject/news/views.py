@@ -14,7 +14,7 @@ from .models import Post, Comment, Author, Subscribers, PostLogDB
 from .filters import PostFilter
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
-
+from .tasks import new_post_notify
 
 
 @login_required
@@ -50,6 +50,8 @@ class NewsList(ListView):
 
     paginate_by = 10
 
+
+
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = PostFilter(self.request.GET, queryset)
@@ -57,6 +59,7 @@ class NewsList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filteset'] = self.filterset
+
         return context
 
 class SearchNews(ListView):
@@ -117,9 +120,10 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
         day = datetime.datetime.today().strftime('%d:%m:%Y')
         today_author_log = PostLogDB.objects.filter(date=day, author=current_user)
         print(today_author_log)
-        if today_author_log.count() <= 3:
+        if today_author_log.count() <= 40:
             postQ.save()
             form.save()
+            new_post_notify.delay()
             return HttpResponseRedirect('../')
         else:
             return HttpResponseRedirect(reverse_lazy('limiterMessage'))

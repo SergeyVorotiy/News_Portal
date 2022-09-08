@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from django.template.loader import render_to_string
 
 from .models import PostCategory, Post, Subscribers, PostLogDB
+from .tasks import new_post_notify
 
 
 @receiver(post_init, sender=PostCategory)
@@ -12,29 +13,30 @@ def category_notify_receiver(sender, instance, **kwargs):
     on_off = True
     if on_off:
         print('post_create_receiver: created', instance)
-        post = Post.objects.last()
-        recipients = []
-        for sub in Subscribers.objects.filter(category=instance.category):
-            recipients.append(sub.user)
-        for i in recipients:
-            html_content = render_to_string(
-                'subMail_created.html',
-                {
-                    'subMail': post,
-                    'recipient': i,
-                    'link_id': post.id,
-                }
-            )
 
-            msg = EmailMultiAlternatives(
-                subject=f'{post.heading} {post.date.strftime("%Y-%m-%d")}',
-                body=f'{post.text}',
-                from_email='svobeckend@inbox.ru',
-                to=[i.email],
-            )
-
-            msg.attach_alternative(html_content, "text/html")
-            msg.send()
+        # new_post_notify.delay()
+        # recipients = []
+        # for sub in Subscribers.objects.filter(category=instance.category):
+        #     recipients.append(sub.user)
+        # for i in recipients:
+        #     html_content = render_to_string(
+        #         'subMail_created.html',
+        #         {
+        #             'subMail': post,
+        #             'recipient': i,
+        #             'link_id': post.id,
+        #         }
+        #     )
+        #
+        #     msg = EmailMultiAlternatives(
+        #         subject=f'{post.heading} {post.date.strftime("%Y-%m-%d")}',
+        #         body=f'{post.text}',
+        #         from_email='svobeckend@inbox.ru',
+        #         to=[i.email],
+        #     )
+        #
+        #     msg.attach_alternative(html_content, "text/html")
+        #     msg.send()
 
 @receiver(post_save, sender=Post)
 def post_publication_log(sender, instance, created, **kwargs):

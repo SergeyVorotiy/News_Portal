@@ -19,29 +19,29 @@ logger = logging.getLogger(__name__)
 def my_job():
     #  Your job processing logic here...
     print('hello from job')
-    for category in Category.objects.all():
-        recipients = []
-        for sub in Subscribers.objects.filter(category=category):
-            recipients.append(sub.user.email)
-        filtered_posts = Post.objects.filter(categories=category)
-
-        html_content = render_to_string(
-            'subMail_in_week.html',
-            {
-                'subMail': filtered_posts,
-
-            }
-        )
-
-        msg = EmailMultiAlternatives(
-            subject=f'Дайджест за неделю!',
-            body=f'',
-            from_email='svobeckend@inbox.ru',
-            to=recipients,
-        )
-
-        msg.attach_alternative(html_content, "text/html")
-        msg.send()
+    # for category in Category.objects.all():
+    #     recipients = []
+    #     for sub in Subscribers.objects.filter(category=category):
+    #         recipients.append(sub.user.email)
+    #     filtered_posts = Post.objects.filter(categories=category)
+    #
+    #     html_content = render_to_string(
+    #         'subMail_in_week.html',
+    #         {
+    #             'subMail': filtered_posts,
+    #
+    #         }
+    #     )
+    #
+    #     msg = EmailMultiAlternatives(
+    #         subject=f'Дайджест за неделю!',
+    #         body=f'',
+    #         from_email='svobeckend@inbox.ru',
+    #         to=recipients,
+    #     )
+    #
+    #     msg.attach_alternative(html_content, "text/html")
+    #     msg.send()
 
 
 # функция, которая будет удалять неактуальные задачи
