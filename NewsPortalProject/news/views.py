@@ -1,10 +1,8 @@
 import datetime
 
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
@@ -12,9 +10,8 @@ from django.views.generic import (
 from .forms import PostForm
 from .models import Post, Comment, Author, Subscribers, PostLogDB
 from .filters import PostFilter
-from django.core.mail import send_mail
-from django.core.mail import EmailMultiAlternatives
 from .tasks import new_post_notify
+from django.core.cache import cache
 
 
 @login_required
@@ -97,6 +94,13 @@ class NewsView(DetailView):
     template_name = 'article.html'
 
     context_object_name = 'article'
+
+    def get_object(self, queryset=None):
+        obj = cache.get(f'product-{self.kwargs["pk"]}', None)
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'product-{self.kwargs["pk"]}', obj)
+        return obj
 
 
 class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
