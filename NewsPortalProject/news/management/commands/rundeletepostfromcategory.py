@@ -17,10 +17,13 @@ class Command(BaseCommand):
         answer = input()  # считываем подтверждение
 
         if answer == 'yes':
-            deleted_category = Category.objects.get(name=str(category_name[1]))
-            
-            self.stdout.write(self.style.SUCCESS(f'Succesfully wiped posts! {deleted_category}'))
+            deleted_category = Category.objects.get(name=category_name[1])
+            postcat = PostCategory.objects.filter(category=deleted_category)
+            for post in postcat:
+                id = post.post.id
+                post.post.delete()
+                self.stdout.write(self.style.SUCCESS(f'Succesfully wiped post - {id}!'))
             return
 
-        self.stdout.write(self.style.ERROR('Access denied'))
 
+        self.stdout.write(self.style.ERROR('Access denied'))
