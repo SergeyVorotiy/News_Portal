@@ -13,5 +13,5 @@ urlpatterns = [
    path('create/', PostCreateView.as_view()),
    path('<int:pk>/delete', PostDelete.as_view()),
    path('<int:pk>/subscribe/', SubscribeMe, name='subscribe'),
-   path('/limiterMessage/', LimiterMessage.as_view(), name='limiterMessage'),
+   path('limiterMessage/', LimiterMessage.as_view(), name='limiterMessage'),
 ]
