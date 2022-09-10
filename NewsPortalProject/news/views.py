@@ -122,7 +122,6 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             postQ.position = 'A'
         day = datetime.datetime.today().strftime('%d:%m:%Y')
         today_author_log = PostLogDB.objects.filter(date=day, author=current_user)
-        print(today_author_log)
         if today_author_log.count() <= 40:
             postQ.save()
             form.save()

@@ -11,8 +11,6 @@ from .tasks import new_post_notify
 @receiver(post_init, sender=PostCategory)
 def category_notify_receiver(sender, instance, **kwargs):
     on_off = True
-    if on_off:
-        print('post_create_receiver: created', instance)
 
         # new_post_notify.delay()
         # recipients = []
