@@ -13,7 +13,7 @@ class Command(BaseCommand):
         # здесь можете писать любой код, который выполнется при вызове вашей команды
         self.stdout.readable()
         self.stdout.write(
-            'Do you really want to delete all post in category yes/no')  # спрашиваем пользователя действительно ли он хочет удалить все товары
+            f'Do you really want to delete all post in category yes/no')  # спрашиваем пользователя действительно ли он хочет удалить все товары
         answer = input()  # считываем подтверждение
 
         if answer == 'yes':

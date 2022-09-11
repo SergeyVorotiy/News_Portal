@@ -140,7 +140,8 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             postQ.save()
             form.save()
             new_post_notify.delay()
-            return HttpResponseRedirect('../')
+            pk = postQ.id
+            return HttpResponseRedirect(f'../{pk}')
         else:
             return HttpResponseRedirect(reverse_lazy('limiterMessage'))
 

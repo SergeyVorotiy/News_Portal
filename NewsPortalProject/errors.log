@@ -213,3 +213,231 @@ Traceback (most recent call last):
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'trans', expected 'endblock'. Did you forget to register or load this tag?
 2022-09-11 15:03:02,044 ERROR "GET / HTTP/1.1" 500 196496 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-11 17:42:31,547 ERROR Internal Server Error: /news/create/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 61 connecting to localhost:6379. Connection refused.'), <traceback object at 0x10cd75400>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 677, in _connect
+    raise err
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 665, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/client.py", line 1592, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/client.py", line 1433, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 1387, in get_connection
+    connection.connect()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 617, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 677, in _connect
+    raise err
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 665, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 168, in _consume_from
+    with self.reconnect_on_error():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/commands/core.py", line 1893, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 1387, in get_connection
+    connection.connect()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 617, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/NewsPortalProject/news/views.py", line 142, in form_valid
+    new_post_notify.delay()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/base.py", line 785, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 61 connecting to localhost:6379. Connection refused.
+2022-09-11 17:42:31,550 ERROR "POST /news/create/ HTTP/1.1" 500 272173 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-11 17:45:58,873 ERROR Internal Server Error: /news/create/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 61 connecting to localhost:6379. Connection refused.'), <traceback object at 0x10d25ac80>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 677, in _connect
+    raise err
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 665, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/client.py", line 1592, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/client.py", line 1433, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 1387, in get_connection
+    connection.connect()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 617, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 677, in _connect
+    raise err
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 665, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 168, in _consume_from
+    with self.reconnect_on_error():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/commands/core.py", line 1893, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 1387, in get_connection
+    connection.connect()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/redis/connection.py", line 617, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/NewsPortalProject/news/views.py", line 142, in form_valid
+    new_post_notify.delay()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/celery/app/base.py", line 785, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 61 connecting to localhost:6379. Connection refused.
+2022-09-11 17:45:58,876 ERROR "POST /news/create/ HTTP/1.1" 500 272905 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
