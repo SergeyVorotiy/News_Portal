@@ -12,6 +12,15 @@ from .models import Post, Comment, Author, Subscribers, PostLogDB
 from .filters import PostFilter
 from .tasks import new_post_notify
 from django.core.cache import cache
+import logging
+
+
+# logger_debug = logging.getLogger('console_debug')
+# logger_warning = logging.getLogger('console_warning')
+# logger_error_console = logging.getLogger('console_error')
+# logger_general = logging.getLogger('general_log')
+# logger_errors_file = logging.getLogger('errors_log')
+# logger_security = logging.getLogger('security_log')
 
 
 @login_required
@@ -48,14 +57,18 @@ class NewsList(ListView):
     paginate_by = 10
 
 
+
+
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = PostFilter(self.request.GET, queryset)
+
         return self.filterset.qs
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filteset'] = self.filterset
-
+        # logger_debug.debug('debag_message')
+        # logger_general.info('Info: ')
         return context
 
 class SearchNews(ListView):
