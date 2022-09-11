@@ -441,3 +441,54 @@ Traceback (most recent call last):
     raise ConnectionError(str(exc)) from exc
 kombu.exceptions.OperationalError: Error 61 connecting to localhost:6379. Connection refused.
 2022-09-11 17:45:58,876 ERROR "POST /news/create/ HTTP/1.1" 500 272905 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-11 19:55:25,512 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 42: 'get_current_timezone'. Did you forget to register or load this tag?"), <traceback object at 0x10c817180>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_current_timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 42: 'get_current_timezone'. Did you forget to register or load this tag?
+2022-09-11 19:55:25,514 ERROR "GET / HTTP/1.1" 500 247374 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None

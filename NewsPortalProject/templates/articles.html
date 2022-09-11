@@ -8,7 +8,7 @@
     <h1>{% trans "All posts" %} ({{articles|length}})</h1>
     {% if articles %}
         {% for article in articles %}
-        <a class="page-link text-dark text-start" href="/news/{{article.id}}">
+        <a class="page-link text-dark text-start news-card" href="/news/{{article.id}}">
         <h3>{{ article.heading|censor }}</h3>
         <p>{{article.date|date:"d M Y"}}</p>
         <p>{{ article.text|censor |truncatewords:20  }}</p>

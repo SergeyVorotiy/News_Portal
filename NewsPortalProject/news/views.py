@@ -2,7 +2,7 @@ import datetime
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
 from django.views import View
@@ -16,6 +16,8 @@ from .tasks import new_post_notify
 from django.core.cache import cache
 from django.utils.translation import gettext as _
 import logging
+from django.utils import timezone
+import pytz
 
 
 # logger_debug = logging.getLogger('console_debug')
@@ -60,7 +62,6 @@ class NewsList(ListView):
 
 
 
-
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = PostFilter(self.request.GET, queryset)
@@ -69,8 +70,14 @@ class NewsList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filteset'] = self.filterset
-
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/')
+
 
 class SearchNews(ListView):
     model = Post

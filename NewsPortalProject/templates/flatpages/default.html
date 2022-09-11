@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>{% load i18n %}
+{% load tz %}
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,11 +11,14 @@
         {% endblock title %}</title>
         {% load static %}
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <style>
+        body {background-color: {% if current_time.hour >= 19 or current_time.hour <= 7 %} darkgray {% else %} white {% endif %};}
+        .news-card {background-color: {% if current_time.hour >= 19 or current_time.hour <= 7 %} darkgray {% else %} white {% endif %};}
+    </style>
     </head>
     <body>
         <!-- Responsive navbar-->
 
-        {% load cache %}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">News Portal</a>
@@ -25,6 +29,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarResponsive">
+                    <div>
                     <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
                         <input type="hidden" name="next" value="{{ redirect_to }}">
                         <select name="language" id="">
@@ -39,6 +44,18 @@
                         </select>
                         <input type="submit" value="set">
                     </form>
+                    {% get_current_timezone as TIME_ZONE %}
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <select name="timezone">
+                            {% for tz in timezones %}
+                            <option class="text-white" value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}><p>{{ tz }}</p></option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Set">
+                    </form>
+                    <h6 class="text-white-50">{{ current_time|timezone:TIME_ZONE }}</h6>
+                    </div>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">{% trans "Home" %}
