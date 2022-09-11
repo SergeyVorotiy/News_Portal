@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-   NewsList, NewsView, SearchNews, PostUpdateView, PostDelete, PostCreateView, SubscribeMe, LimiterMessage
+   NewsList, NewsView, SearchNews, PostUpdateView, PostDelete, PostCreateView, SubscribeMe, LimiterMessage, Index
 )
 from django.views.decorators.cache import cache_page
 
@@ -14,4 +14,5 @@ urlpatterns = [
    path('<int:pk>/delete', PostDelete.as_view()),
    path('<int:pk>/subscribe/', SubscribeMe, name='subscribe'),
    path('limiterMessage/', LimiterMessage.as_view(), name='limiterMessage'),
+   path('testlocale/', Index.as_view()),
 ]

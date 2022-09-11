@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>{% load i18n %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h2>Здравствуй, {{ post.author.user.username }}! Вот что вышло за неделю в твоём любимом разделе! </h2>
+    <h2>{% trans "Hello" %}, {{ post.author.user.username }}! {% trans "That's what happened during the week in your favourite section" %}! </h2>
     {% for post in subMail %}
     <h3> {{ post.heading }} </h3>
-    <a href="http://127.0.0.1:8000/news/{{ post.id }}">Прочитать</a>
+    <a href="http://127.0.0.1:8000/news/{{ post.id }}">{% trans "To read" %}</a>
     {% endfor %}
 
 </body>

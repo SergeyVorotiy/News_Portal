@@ -1,14 +1,15 @@
 {% extends 'flatpages/default.html' %}
+{% load i18n %}
 {% load custom_filters %}
 {% load custom_tags %}
 {% block title %}
     Search
 {% endblock title %}
 {% block content %}
-    <h1>Поиск ({{search|length}})</h1>
+    <h1>{% trans "Search" %} ({{search|length}})</h1>
     <form action="" method="get">
         {{ filterset.form.as_p }}
-        <input type="submit" value="Найти" />
+        <input type="submit" value="{% trans 'Search' %}" />
     </form>
     {% if search %}
         {% for article in search %}
@@ -20,13 +21,13 @@
         <hr>
         {% endfor %}
     {% else %}
-        <h1>Введите запрос</h1>
+        <h1>{% trans "Enter a request" %}</h1>
     {% endif %}
         {% if page_obj.has_previous %}
             {% if page_obj.previous_page_number == 1 %}
                 <a href="?{% url_replace page=1%}">1</a>
             {% else %}
-                <a href="{% url_replace page=1%}">В начало</a>
+                <a href="{% url_replace page=1%}">{% trans "To begin" %}</a>
                 ...
                 <a href="?{% url_replace page=page_obj.previous_page_number%}">{{ page_obj.previous_page_number }}</a>
             {% endif %}
@@ -36,7 +37,7 @@
             <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
             {% if page_obj.next_page_number != paginator.num_pages %}
                 ...
-                <a href="?{% url_replace page=page_obj.paginator.num_pages %}"> В конец</a>
+                <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{% trans "End" %}</a>
             {% endif %}
         {% endif %}
 {% endblock content %}

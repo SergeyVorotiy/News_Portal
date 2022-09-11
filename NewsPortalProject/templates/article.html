@@ -1,5 +1,6 @@
 {% extends 'flatpages/default.html' %}
 {% load custom_filters %}
+{% load i18n %}
 {% block title %}
     Article
 {% endblock title %}
@@ -8,19 +9,19 @@
 <div class="text-start">
     <p>{{article.date|date:"d M Y"}}</p>
     <p>{{article.text|censor}}</p>
-    <p>Автор: {{article.author.user.username}}</p>
-    <p class="flex justify-content-start">Категории:
+    <p>{% trans "Author" %}: {{article.author.user.username}}</p>
+    <p class="flex justify-content-start">{% trans "Categories" %}:
         {% for category in article.categories.all %}
         {{category}};
         {% endfor %}
     </p>
     <hr>
     {% if article.author.user == request.user %}
-    <a href="{{ article.id }}/update">Изменить</a>
-
+    <a href="{{ article.id }}/update">{% trans "Change" %}</a>
+    <a href="{{ article.id }}/delete">{% trans "Delete" %}</a>
     {% endif %}
     {% if request.user %}
-    <a class="m-3" href="{{ article.id }}/subscribe">Подписаться на категории</a>
+    <a class="m-3" href="{{ article.id }}/subscribe">{% trans "Subscribe" %}</a>
     {% endif %}
 </div>
 {% endblock content %}

@@ -1,9 +1,11 @@
 import datetime
 
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
+from django.views import View
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 )
@@ -12,6 +14,7 @@ from .models import Post, Comment, Author, Subscribers, PostLogDB
 from .filters import PostFilter
 from .tasks import new_post_notify
 from django.core.cache import cache
+from django.utils.translation import gettext as _
 import logging
 
 
@@ -158,3 +161,9 @@ class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('post_list')
 
+
+class Index(View):
+    def get(self, request):
+        string = _('Hello world')
+
+        return HttpResponse(string)

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>{% load i18n %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h2>Здравствуй, {{recipient}}. Новая статья в твоём любимом разделе! </h2>
+    <h2>{% trans "Hello" %}, {{recipient}}. {% trans "New post in your favourite section" %}! </h2>
     <p> {{ subMail.text|truncatechars:50 }} </p>
-    <a href="http://127.0.0.1:8000/news/{{ link_id }}">Прочитать</a>
+    <a href="http://127.0.0.1:8000/news/{{ link_id }}">{% trans "To read" %}</a>
 </body>
 </html>

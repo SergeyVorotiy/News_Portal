@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-11 14:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: news/models.py:10 news/models.py:86 news/models.py:91
+msgid "user id"
+msgstr "номер пользователя"
+
+#: news/models.py:11
+msgid "author rating"
+msgstr "рейтинг автора"
+
+#: news/models.py:32
+msgid "category name"
+msgstr "имя категории"
+
+#: news/models.py:46 news/models.py:105
+msgid "author id"
+msgstr "номер автора"
+
+#: news/models.py:47
+#, fuzzy
+#| msgid "Create article"
+msgid "news or article"
+msgstr "Создать статью"
+
+#: news/models.py:48 news/models.py:93
+msgid "auto date"
+msgstr "автоматическая дата"
+
+#: news/models.py:49
+msgid "categories list"
+msgstr "список категорий"
+
+#: news/models.py:50
+msgid "heading"
+msgstr "заголовок"
+
+#: news/models.py:51 news/models.py:92
+msgid "text"
+msgstr "текст"
+
+#: news/models.py:52
+msgid "post rating"
+msgstr "рейтинг публикации"
+
+#: news/models.py:78 news/models.py:87
+msgid "category id"
+msgstr "номер категории"
+
+#: news/models.py:79 news/models.py:90
+msgid "post id"
+msgstr "номер публикации"
+
+#: news/models.py:94
+msgid "comment rating"
+msgstr "рейтинг комментария"
+
+#: news/models.py:106
+msgid "date"
+msgstr "дата"
+
+#: news/views.py:167
+msgid "Hello world"
+msgstr "Привет мир"
+
+#: templates/article.html:11
+msgid "Author"
+msgstr "Автор"
+
+#: templates/article.html:12
+msgid "Categories"
+msgstr "Категории"
+
+#: templates/article.html:19
+msgid "Change"
+msgstr "Изменить"
+
+#: templates/article.html:20 templates/delete.html:8
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/article.html:23
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: templates/articles.html:4 templates/flatpages/default.html:49
+msgid "News"
+msgstr "Новости"
+
+#: templates/articles.html:7
+msgid "All posts"
+msgstr "Все публикации"
+
+#: templates/articles.html:18
+msgid "There's nothing here yet"
+msgstr "Здесь пока ничего нет"
+
+#: templates/articles.html:24 templates/search.html:29
+msgid "To begin"
+msgstr "В начало"
+
+#: templates/articles.html:34 templates/search.html:39
+msgid "End"
+msgstr "В конец"
+
+#: templates/delete.html:4
+msgid "delete post"
+msgstr "Удалить публикацию"
+
+#: templates/flatpages/default.html:44
+msgid "Home"
+msgstr "Домой"
+
+#: templates/flatpages/default.html:45
+msgid "(current)"
+msgstr "(текущая)"
+
+#: templates/flatpages/default.html:52 templates/search.html:8
+#: templates/search.html:11
+msgid "Search"
+msgstr "Поиск"
+
+#: templates/flatpages/default.html:55
+msgid "Create News"
+msgstr "Создать новость"
+
+#: templates/flatpages/default.html:58
+msgid "Create article"
+msgstr "Создать статью"
+
+#: templates/flatpages/default.html:63
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/flatpages/default.html:65 templates/login.html:4
+msgid "Log in"
+msgstr "Войти"
+
+#: templates/flatpages/default.html:69
+msgid "Become an author"
+msgstr "Стать автором"
+
+#: templates/limiterMessage.html:3
+msgid "Today you can't publish posts"
+msgstr "Сегодня вы не сможете публиковать"
+
+#: templates/limiterMessage.html:4
+msgid "Back"
+msgstr "Назад"
+
+#: templates/login.html:20
+msgid "Register"
+msgstr "Регистрация"
+
+#: templates/logout.html:4
+msgid "Now you are log out"
+msgstr "Вы вышли"
+
+#: templates/search.html:23
+msgid "Enter a request"
+msgstr "Введите запрос"
+
+#: templates/subMail_created.html:9 templates/subMail_in_week.html:9
+#, fuzzy
+#| msgid "Hello world"
+msgid "Hello"
+msgstr "Привет мир"
+
+#: templates/subMail_created.html:9
+msgid "New post in your favourite section"
+msgstr "Новая публикация в твоей любимой категории"
+
+#: templates/subMail_created.html:11 templates/subMail_in_week.html:12
+msgid "To read"
+msgstr "Читать"
+
+#: templates/subMail_in_week.html:9
+msgid "That's what happened during the week in your favourite section"
+msgstr "Новое за неделю в твоей любимой категории"

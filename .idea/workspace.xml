@@ -3,9 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="fe00e52d-affa-4756-9add-3b6e02858284" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/a7476b12ea508782a91df770076d4133.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/a7476b12ea508782a91df770076d4133.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/bc34fe040f1a452e84466b14052196bd.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/bc34fe040f1a452e84466b14052196bd.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/002db6a97cd3c078e32a5aff3b7ba144.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/002db6a97cd3c078e32a5aff3b7ba144.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/86b9ad53c5a5cdb1f77950b02e4cf09c.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/86b9ad53c5a5cdb1f77950b02e4cf09c.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/c7992ab6d96eef92fdffdac20b764b53.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/c7992ab6d96eef92fdffdac20b764b53.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/flatpages/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/flatpages/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/limiterMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/limiterMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/subMail_created.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/subMail_created.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/subMail_in_week.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/subMail_in_week.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662043591007</updated>
       <workItem from="1662043594226" duration="25842000" />
-      <workItem from="1662887098234" duration="7030000" />
+      <workItem from="1662887098234" duration="14771000" />
     </task>
     <servers />
   </component>
