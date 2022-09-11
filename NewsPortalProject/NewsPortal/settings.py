@@ -186,7 +186,7 @@ LOGGING = {
             'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s'
         },
         'error_format': {
-            'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s %(ext_info)s'
+            'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s %(exc_info)s'
         },
         'general_file_format': {
             'format': '%(asctime)s %(levelname)s %(module)s',

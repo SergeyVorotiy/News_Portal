@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe00e52d-affa-4756-9add-3b6e02858284" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dcd05c47-db3a-48e9-ada2-c93a54f4a558.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dcd05c47-db3a-48e9-ada2-c93a54f4a558.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/4c05a190ed93f872bd2929e03fbff307.djcache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/551611604c1b6b09bace9f3d13d3764b.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/551611604c1b6b09bace9f3d13d3764b.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/5c0501f24d2d4fc21a1c863817940e3d.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/5c0501f24d2d4fc21a1c863817940e3d.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/86b9ad53c5a5cdb1f77950b02e4cf09c.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/86b9ad53c5a5cdb1f77950b02e4cf09c.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/a7476b12ea508782a91df770076d4133.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/a7476b12ea508782a91df770076d4133.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/bc34fe040f1a452e84466b14052196bd.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/bc34fe040f1a452e84466b14052196bd.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/c53a7a4d4b281ccb4d2badc90725119d.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/c53a7a4d4b281ccb4d2badc90725119d.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/c7992ab6d96eef92fdffdac20b764b53.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/c7992ab6d96eef92fdffdac20b764b53.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/e83343811a7af48c58607b25b6302dcf.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/e83343811a7af48c58607b25b6302dcf.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/general.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/general.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/article.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662043591007</updated>
       <workItem from="1662043594226" duration="25842000" />
-      <workItem from="1662887098234" duration="4935000" />
+      <workItem from="1662887098234" duration="6250000" />
     </task>
     <servers />
   </component>

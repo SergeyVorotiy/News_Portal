@@ -1,0 +1,48 @@
+2022-09-11 10:48:28,012 ERROR Internal Server Error: /news/105 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'IndexError'>, IndexError('string index out of range'), <traceback object at 0x110b90340>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/NewsPortalProject/news/templatetags/custom_filters.py", line 19, in censor
+    if c_word[-1] == ',' or c_word[-1] == '.':
+IndexError: string index out of range
+2022-09-11 10:48:28,052 ERROR "GET /news/105 HTTP/1.1" 500 145 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None

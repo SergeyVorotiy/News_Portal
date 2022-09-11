@@ -28,7 +28,6 @@ def SubscribeMe(request, pk):
     user = request.user
     post = Post.objects.get(id=pk)
     categories = post.categories.all()
-
     for category in categories:
         its_ok = False
         subscribe = Subscribers(user=user, category=category)
@@ -67,8 +66,7 @@ class NewsList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filteset'] = self.filterset
-        # logger_debug.debug('debag_message')
-        # logger_general.info('Info: ')
+
         return context
 
 class SearchNews(ListView):
