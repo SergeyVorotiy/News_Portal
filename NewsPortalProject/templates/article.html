@@ -7,7 +7,7 @@
 <h1>{{ article.heading|censor }}</h1>
 <div class="text-start">
     <p>{{article.date|date:"d M Y"}}</p>
-    <p>{{article.txt|censor}}</p>
+    <p>{{article.text|censor}}</p>
     <p>Автор: {{article.author.user.username}}</p>
     <p class="flex justify-content-start">Категории:
         {% for category in article.categories.all %}
