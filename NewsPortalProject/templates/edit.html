@@ -1,4 +1,17 @@
 {% extends 'flatpages/default.html' %}
+{% block style %}
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
+{% load custom_tags %}
+{% define current_time|timezone:TIME_ZONE as loctime %}
+{% if loctime.hour >= 19 or loctime.hour <= 7 %}
+<style>
+    body {
+        background-color: darkgray;
+    }
+</style>
+{% endif %}
+{% endblock style %}
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}

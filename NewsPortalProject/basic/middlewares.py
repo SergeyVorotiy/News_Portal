@@ -14,4 +14,5 @@ class TimezoneMiddleware:
             timezone.activate(pytz.timezone(tzname))
         else:
             timezone.deactivate()
+
         return self.get_response(request)

@@ -60,23 +60,16 @@ class NewsList(ListView):
 
     paginate_by = 10
 
-
-
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = PostFilter(self.request.GET, queryset)
-
         return self.filterset.qs
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['filteset'] = self.filterset
+        context['filterset'] = self.filterset
         context['current_time'] = timezone.now()
-        context['timezones'] = pytz.common_timezones
         return context
-
-    def post(self, request):
-        request.session['django_timezone'] = request.POST['timezone']
-        return redirect('/')
 
 
 class SearchNews(ListView):
@@ -98,7 +91,9 @@ class SearchNews(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
+        context['current_time'] = timezone.now()
         return context
+
 
 class CommentList(ListView):
     model = Comment
@@ -116,12 +111,10 @@ class NewsView(DetailView):
 
     context_object_name = 'article'
 
-    def get_object(self, queryset=None):
-        obj = cache.get(f'product-{self.kwargs["pk"]}', None)
-        if not obj:
-            obj = super().get_object(queryset=self.queryset)
-            cache.set(f'product-{self.kwargs["pk"]}', obj)
-        return obj
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        return context
 
 
 class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
@@ -129,7 +122,6 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     form_class = PostForm
     model = Post
     template_name = 'edit.html'
-
 
     def form_valid(self, form):
         postQ = form.save(commit=False)
@@ -152,15 +144,31 @@ class PostCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
         else:
             return HttpResponseRedirect(reverse_lazy('limiterMessage'))
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        return context
+
 
 class LimiterMessage(TemplateView):
     template_name = 'limiterMessage.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        return context
+
 
 class PostUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     permission_required = ('news.change_post', )
     form_class = PostForm
     model = Post
     template_name = 'edit.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        return context
 
 
 class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
@@ -169,9 +177,28 @@ class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('post_list')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        return context
 
-class Index(View):
-    def get(self, request):
-        string = _('Hello world')
 
-        return HttpResponse(string)
+def chenge_time_zone(request):
+    current_time = timezone.now()
+    context = {
+        'current_time': timezone.now(),
+        'timezones': pytz.common_timezones,
+    }
+    if request.POST:
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/chengetime/')
+
+
+    return HttpResponse(render(request, 'chenge_time_zone.html', context))
+
+
+def chenge_language(request):
+    context = {
+        'current_time': timezone.now(),
+    }
+    return HttpResponse(render(request, 'chenge_language.html', context))

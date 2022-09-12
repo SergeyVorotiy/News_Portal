@@ -1,5 +1,18 @@
 {% extends 'flatpages/default.html' %}
 {% load i18n %}
+{% block style %}
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
+{% load custom_tags %}
+{% define current_time|timezone:TIME_ZONE as loctime %}
+{% if loctime.hour >= 19 or loctime.hour <= 7 %}
+<style>
+    body {
+        background-color: darkgray;
+    }
+</style>
+{% endif %}
+{% endblock style %}
 {% block content %}
     <h1>{% trans "Today you can't publish posts" %}</h1>
     <a href="/">{% trans "Back" %}</a>

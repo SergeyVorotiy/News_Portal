@@ -1,0 +1,30 @@
+{% extends 'flatpages/default.html' %}
+{% load i18n %}
+{% load tz %}
+{% block style %}
+{% get_current_timezone as TIME_ZONE %}
+{% load custom_tags %}
+{% define current_time|timezone:TIME_ZONE as loctime %}
+{% if loctime.hour >= 19 or loctime.hour <= 7 %}<style>
+    body {
+        background-color: darkgray;
+    }
+</style>
+{% endif %}
+{% endblock style %}
+{% block content %}
+
+{% get_current_timezone as TIME_ZONE %}
+
+    {{ TIME_ZONE }}
+    {{ current_time|timezone:TIME_ZONE }}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <select name="timezone">
+            {% for tz in timezones %}
+            <option class="text-white" value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}><p>{{ tz }}</p></option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Set">
+    </form>
+{% endblock content %}
