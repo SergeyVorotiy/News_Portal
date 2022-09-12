@@ -10,7 +10,7 @@ from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 )
 from .forms import PostForm
-from .models import Post, Comment, Author, Subscribers, PostLogDB
+from .models import Post, Comment, Author, Subscribers, PostLogDB, Category
 from .filters import PostFilter
 from .tasks import new_post_notify
 from django.core.cache import cache

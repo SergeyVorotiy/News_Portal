@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-11 14:55+0000\n"
+"POT-Creation-Date: 2022-09-12 16:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,104 +78,116 @@ msgstr "рейтинг комментария"
 msgid "date"
 msgstr "дата"
 
-#: news/views.py:167
-msgid "Hello world"
-msgstr "Привет мир"
-
-#: templates/article.html:11
+#: templates/article.html:25
 msgid "Author"
 msgstr "Автор"
 
-#: templates/article.html:12
+#: templates/article.html:26
 msgid "Categories"
 msgstr "Категории"
 
-#: templates/article.html:19
+#: templates/article.html:33
 msgid "Change"
 msgstr "Изменить"
 
-#: templates/article.html:20 templates/delete.html:8
+#: templates/article.html:34 templates/delete.html:21
 msgid "Delete"
 msgstr "Удалить"
 
-#: templates/article.html:23
+#: templates/article.html:37
 msgid "Subscribe"
 msgstr "Подписаться"
 
-#: templates/articles.html:4 templates/flatpages/default.html:49
+#: templates/articles.html:5 templates/flatpages/default.html:38
 msgid "News"
 msgstr "Новости"
 
-#: templates/articles.html:7
+#: templates/articles.html:24
 msgid "All posts"
 msgstr "Все публикации"
 
-#: templates/articles.html:18
+#: templates/articles.html:35
 msgid "There's nothing here yet"
 msgstr "Здесь пока ничего нет"
 
-#: templates/articles.html:24 templates/search.html:29
+#: templates/articles.html:41 templates/search.html:46
 msgid "To begin"
 msgstr "В начало"
 
-#: templates/articles.html:34 templates/search.html:39
+#: templates/articles.html:51 templates/search.html:56
 msgid "End"
 msgstr "В конец"
 
-#: templates/delete.html:4
+#: templates/chenge_language.html:18
+msgid "You can chenge language"
+msgstr "Можешь изменить язык"
+
+#: templates/chenge_time_zone.html:16
+msgid "You can chenge Ttime zone"
+msgstr "Можешь изменить часовой пояс"
+
+#: templates/delete.html:17
 msgid "delete post"
 msgstr "Удалить публикацию"
 
-#: templates/flatpages/default.html:44
+#: templates/flatpages/default.html:33
 msgid "Home"
 msgstr "Домой"
 
-#: templates/flatpages/default.html:45
+#: templates/flatpages/default.html:34
 msgid "(current)"
 msgstr "(текущая)"
 
-#: templates/flatpages/default.html:52 templates/search.html:8
-#: templates/search.html:11
+#: templates/flatpages/default.html:41 templates/search.html:25
+#: templates/search.html:28
 msgid "Search"
 msgstr "Поиск"
 
-#: templates/flatpages/default.html:55
+#: templates/flatpages/default.html:44
 msgid "Create News"
 msgstr "Создать новость"
 
-#: templates/flatpages/default.html:58
+#: templates/flatpages/default.html:47
 msgid "Create article"
 msgstr "Создать статью"
 
-#: templates/flatpages/default.html:63
+#: templates/flatpages/default.html:50
+msgid "language"
+msgstr "Язык"
+
+#: templates/flatpages/default.html:53
+msgid "timezone"
+msgstr "Часовой пояс"
+
+#: templates/flatpages/default.html:58
 msgid "Log out"
 msgstr "Выйти"
 
-#: templates/flatpages/default.html:65 templates/login.html:4
+#: templates/flatpages/default.html:60 templates/login.html:17
 msgid "Log in"
 msgstr "Войти"
 
-#: templates/flatpages/default.html:69
+#: templates/flatpages/default.html:64
 msgid "Become an author"
 msgstr "Стать автором"
 
-#: templates/limiterMessage.html:3
+#: templates/limiterMessage.html:17
 msgid "Today you can't publish posts"
 msgstr "Сегодня вы не сможете публиковать"
 
-#: templates/limiterMessage.html:4
+#: templates/limiterMessage.html:18
 msgid "Back"
 msgstr "Назад"
 
-#: templates/login.html:20
+#: templates/login.html:33
 msgid "Register"
 msgstr "Регистрация"
 
-#: templates/logout.html:4
+#: templates/logout.html:17
 msgid "Now you are log out"
 msgstr "Вы вышли"
 
-#: templates/search.html:23
+#: templates/search.html:40
 msgid "Enter a request"
 msgstr "Введите запрос"
 
@@ -196,3 +208,6 @@ msgstr "Читать"
 #: templates/subMail_in_week.html:9
 msgid "That's what happened during the week in your favourite section"
 msgstr "Новое за неделю в твоей любимой категории"
+
+#~ msgid "Hello world"
+#~ msgstr "Привет мир"

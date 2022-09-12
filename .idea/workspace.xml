@@ -3,38 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="fe00e52d-affa-4756-9add-3b6e02858284" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/basic/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/basic/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/0b6081734d7659fe953ea833388c32e3.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/0b6081734d7659fe953ea833388c32e3.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/335c843ed3b234536ada3c4fa8ffaa88.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/335c843ed3b234536ada3c4fa8ffaa88.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/4975790d5fbd4a43b003a7e5ab3d938d.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/4975790d5fbd4a43b003a7e5ab3d938d.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/5922c03128d3a77089a61ceab69336d9.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/5922c03128d3a77089a61ceab69336d9.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/5c90f6a3fd5ca4f0853be1e71267db0d.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/5c90f6a3fd5ca4f0853be1e71267db0d.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/86b9ad53c5a5cdb1f77950b02e4cf09c.djcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/92123fc23b9e1a80ba6452d6dd302b95.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/92123fc23b9e1a80ba6452d6dd302b95.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/93d0c9dee70df9408bdb56da5f61331c.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/93d0c9dee70df9408bdb56da5f61331c.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/984748fb55d661838704bedacd2e5f1b.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/984748fb55d661838704bedacd2e5f1b.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/c3a8202af5cdfb49404e169f4051c49a.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/c3a8202af5cdfb49404e169f4051c49a.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/bc5df53979c2574ba945f3ec8b1138bd.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/bc5df53979c2574ba945f3ec8b1138bd.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/c9b43a8a4b5eb620a42d7a8d96b266c7.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/c9b43a8a4b5eb620a42d7a8d96b266c7.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/d700381a33cc110dde705b6496d31001.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/d700381a33cc110dde705b6496d31001.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/e3e978fbf1dbd3963cc1530ff368c46c.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/e3e978fbf1dbd3963cc1530ff368c46c.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/e5498dc39da80f3cd7ab069206e99a48.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/e5498dc39da80f3cd7ab069206e99a48.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/f6381ebc4d99f5b31350d62738758249.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/f6381ebc4d99f5b31350d62738758249.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/fa6976f137cac3d1cff3b33f277ab778.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/fa6976f137cac3d1cff3b33f277ab778.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/fc4236e1c59544762f7b88e266d60009.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/fc4236e1c59544762f7b88e266d60009.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/templatetags/custom_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/templatetags/custom_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/locale/ru/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/chenge_language.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/chenge_language.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/chenge_time_zone.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/chenge_time_zone.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/flatpages/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/flatpages/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/limiterMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/limiterMessage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/templates/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662043591007</updated>
       <workItem from="1662043594226" duration="25842000" />
-      <workItem from="1662887098234" duration="36998000" />
+      <workItem from="1662887098234" duration="38587000" />
     </task>
     <servers />
   </component>

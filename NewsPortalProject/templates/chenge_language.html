@@ -15,6 +15,7 @@
 {% endif %}
 {% endblock style %}
 {% block content %}
+<h2>{% trans "You can chenge language" %}</h2>
     <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
         <input type="hidden" name="next" value="{{ redirect_to }}">
         <select name="language" id="">

@@ -33,7 +33,7 @@
     <a href="{{ article.id }}/update">{% trans "Change" %}</a>
     <a href="{{ article.id }}/delete">{% trans "Delete" %}</a>
     {% endif %}
-    {% if request.user %}
+    {% if article.author.user != request.user and request.user %}
     <a class="m-3" href="{{ article.id }}/subscribe">{% trans "Subscribe" %}</a>
     {% endif %}
 </div>
