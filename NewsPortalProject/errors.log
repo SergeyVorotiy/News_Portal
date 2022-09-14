@@ -2860,3 +2860,546 @@ Traceback (most recent call last):
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif', expected 'endblock'. Did you forget to register or load this tag?
 2022-09-12 16:10:25,749 ERROR "GET /news/112 HTTP/1.1" 500 170131 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:49:46,715 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10c729240>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:49:46,717 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:50:38,887 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x1108b8fc0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:50:38,888 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:50:54,754 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10c7d4ec0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:50:54,754 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:51:05,853 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10d10d480>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:51:05,854 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:52:01,369 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x11093cd80>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:52:01,370 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:52:05,330 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x110832e80>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:52:05,331 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:52:11,055 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x1108e4940>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:52:11,055 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 15:58:33,641 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10f324c00>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 15:58:33,642 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:00:07,084 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10ec28c00>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:00:07,085 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:01:26,139 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10eb1e5c0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:01:26,140 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:01:34,518 ERROR Internal Server Error: / /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10eb8b000>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:01:34,518 ERROR "GET / HTTP/1.1" 500 79478 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:01:53,688 ERROR Internal Server Error: /posts/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10ec6ac00>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:01:53,689 ERROR "GET /posts/ HTTP/1.1" 500 86856 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:04:20,187 ERROR Internal Server Error: /api/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10d4b8200>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:04:20,188 ERROR "GET /api/ HTTP/1.1" 500 79526 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:05:30,235 ERROR Internal Server Error: /api/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10d550c40>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:05:30,235 ERROR "GET /api/ HTTP/1.1" 500 79526 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:08:51,498 ERROR Internal Server Error: /api/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10d4a68c0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:08:51,499 ERROR "GET /api/ HTTP/1.1" 500 79526 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:10:29,081 ERROR Internal Server Error: /api/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x10cc8a9c0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2022-09-14 16:10:29,081 ERROR "GET /api/ HTTP/1.1" 500 79526 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:12:46,234 ERROR Internal Server Error: /api/posts/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.'), <traceback object at 0x11084b7c0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 803, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'author-detail' not found. 'author-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2022-09-14 16:12:46,236 ERROR "GET /api/posts/ HTTP/1.1" 500 172073 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:23:50,652 ERROR Internal Server Error: /api/news/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Field name `author__user__username` is not valid for model `Post`.'), <traceback object at 0x10c8de340>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `author__user__username` is not valid for model `Post`.
+2022-09-14 16:23:50,653 ERROR "GET /api/news/ HTTP/1.1" 500 147986 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:57:39,250 ERROR Internal Server Error: /api/articles/110/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Author' object has no attribute 'user__username'"), <traceback object at 0x10ea8a0c0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 469, in to_representation
+    return getattr(obj, self.slug_field)
+AttributeError: 'Author' object has no attribute 'user__username'
+2022-09-14 16:57:39,252 ERROR "GET /api/articles/110/ HTTP/1.1" 500 114427 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:57:51,108 ERROR Internal Server Error: /api/articles/110/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'TypeError'>, TypeError('Object of type User is not JSON serializable'), <traceback object at 0x11147b800>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 680, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 413, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type User is not JSON serializable
+2022-09-14 16:57:51,109 ERROR "GET /api/articles/110/ HTTP/1.1" 500 161218 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:58:41,955 ERROR Internal Server Error: /api/articles/110/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'TypeError'>, TypeError('getattr(): attribute name must be string'), <traceback object at 0x10ecf0fc0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 469, in to_representation
+    return getattr(obj, self.slug_field)
+TypeError: getattr(): attribute name must be string
+2022-09-14 16:58:41,957 ERROR "GET /api/articles/110/ HTTP/1.1" 500 114741 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 16:59:35,797 ERROR Internal Server Error: /api/articles/110/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Author' object has no attribute 'ManyRelatedField(child_relation=SlugRelatedField(read_only=True, slug_field='username'), read_only=True)'"), <traceback object at 0x10d1320c0>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 469, in to_representation
+    return getattr(obj, self.slug_field)
+AttributeError: 'Author' object has no attribute 'ManyRelatedField(child_relation=SlugRelatedField(read_only=True, slug_field='username'), read_only=True)'
+2022-09-14 16:59:35,813 ERROR "GET /api/articles/110/ HTTP/1.1" 500 115627 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 17:00:47,193 ERROR Internal Server Error: /api/articles/110/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Author' object has no attribute 'user.username'"), <traceback object at 0x11168f640>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/relations.py", line 469, in to_representation
+    return getattr(obj, self.slug_field)
+AttributeError: 'Author' object has no attribute 'user.username'
+2022-09-14 17:00:47,195 ERROR "GET /api/articles/110/ HTTP/1.1" 500 114415 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-14 17:00:54,673 ERROR Internal Server Error: /api/articles/110/ /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'TypeError'>, TypeError('Object of type User is not JSON serializable'), <traceback object at 0x10ecbeb40>)
+Traceback (most recent call last):
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 680, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 413, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type User is not JSON serializable
+2022-09-14 17:00:54,674 ERROR "GET /api/articles/110/ HTTP/1.1" 500 161218 /Users/sergo/Documents/WEB/WebLessons/News_Portal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None

@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fe00e52d-affa-4756-9add-3b6e02858284" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/335c843ed3b234536ada3c4fa8ffaa88.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/335c843ed3b234536ada3c4fa8ffaa88.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/NewsPortal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/5922c03128d3a77089a61ceab69336d9.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/5922c03128d3a77089a61ceab69336d9.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/984748fb55d661838704bedacd2e5f1b.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/984748fb55d661838704bedacd2e5f1b.djcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPortalProject/cache_files/c9b43a8a4b5eb620a42d7a8d96b266c7.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/cache_files/c9b43a8a4b5eb620a42d7a8d96b266c7.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPortalProject/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPortalProject/news/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -69,6 +73,7 @@
       <updated>1662043591007</updated>
       <workItem from="1662043594226" duration="25842000" />
       <workItem from="1662887098234" duration="39564000" />
+      <workItem from="1663113333353" duration="6653000" />
     </task>
     <servers />
   </component>

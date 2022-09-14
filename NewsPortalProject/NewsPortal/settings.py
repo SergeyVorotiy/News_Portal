@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'django_apscheduler',
-    'celery'
+    'celery',
+    'rest_framework'
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -281,4 +282,13 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ]
 }

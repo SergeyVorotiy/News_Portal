@@ -16,13 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from rest_framework import routers
+
+
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
-    path('news/', include('news.urls')),
+    # path('news/', include('news.urls')),
     path('', include('news.urls')),
-    path('articles/', include('news.urls')),
+    # path('articles/', include('news.urls')),
     path('', include('accounts.urls')),
     path('sign/', include('sign.urls')),
     path('accounts/', include('allauth.urls')),
+
 ]

@@ -1,5 +1,4 @@
 import datetime
-
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect, redirect
@@ -18,14 +17,18 @@ from django.utils.translation import gettext as _
 import logging
 from django.utils import timezone
 import pytz
+from rest_framework import viewsets
+from .serializers import PostSerializer
 
 
-# logger_debug = logging.getLogger('console_debug')
-# logger_warning = logging.getLogger('console_warning')
-# logger_error_console = logging.getLogger('console_error')
-# logger_general = logging.getLogger('general_log')
-# logger_errors_file = logging.getLogger('errors_log')
-# logger_security = logging.getLogger('security_log')
+class NewsViewset(viewsets.ModelViewSet):
+    queryset = Post.objects.filter(position='N')
+    serializer_class = PostSerializer
+
+
+class ArticleViewset(viewsets.ModelViewSet):
+    queryset = Post.objects.filter(position='A')
+    serializer_class = PostSerializer
 
 
 @login_required
